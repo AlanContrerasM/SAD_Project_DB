@@ -7,6 +7,8 @@
 </head>
 
 <body>
+    <div id="container">
+		
     <h1>Deleting from SAD database</h1>
     <?php
     $servername = "localhost";
@@ -44,6 +46,7 @@ the code in catch-block is executed. */
     echo "<a href='../index.html'>Back to the homepage</a>";
 
     ?>
+    </div>
 
 </body>
 

@@ -7,6 +7,8 @@
 </head>
 
 <body>
+	<div id="container">
+
 	<?php
 	$servername = "localhost";
 	$databasename = "saeedDB";
@@ -41,6 +43,7 @@ the code in catch-block is executed. */
 	echo "<a href='../index.html'>Back to the homepage</a>";
 
 	?>
+	</div>
 
 </body>
 

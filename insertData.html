@@ -8,33 +8,36 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Inserting a student to our table Student in SAD database</h1>
-    <form method="post" action="php/insertIntoValues.php">
-      <fieldset>
-        <legend>Enter the information of the student:</legend>
-
-        <label>Student ID </label><input type="number" name="stdId" /> <br />
-        <label>First Name</label><input type="text" name="fname" /> <br />
-        <label>Last Name</label><input type="text" name="lname" /> <br />
-        <label>Birth Date</label><input type="date" name="bdate" /> <br />
-        <label>Is he/she an alumnus?</label><br />
-        <input name="alumnus" type="radio" value="1" /> <label>Yes</label>
-        <br />
-        <input name="alumnus" type="radio" value="0" /> <label>No</label>
-        <!-- <br />
-        <label>Department</label>
-        <select name="dept">
-          <option>CSIS</option>
-          <option>PHYS</option>
-          <option>ART</option>
-          <option>MATH</option>
-        </select> -->
-        <br />
-        <br />
-        <input type="submit" value="Submit" />
-      </fieldset>
-    </form>
-    <br />
-    <a href="index.html">Back to the homepage</a>
+    <div id="container">
+      
+      <h1>Inserting a student to our table Student in SAD database</h1>
+      <form method="post" action="php/insertIntoValues.php">
+        <fieldset>
+          <legend>Enter the information of the student:</legend>
+  
+          <label>Student ID </label><input type="number" name="stdId" /> <br />
+          <label>First Name</label><input type="text" name="fname" /> <br />
+          <label>Last Name</label><input type="text" name="lname" /> <br />
+          <label>Birth Date</label><input type="date" name="bdate" /> <br />
+          <label>Is he/she an alumnus?</label><br />
+          <input name="alumnus" type="radio" value="1" /> <label>Yes</label>
+          <br />
+          <input name="alumnus" type="radio" value="0" /> <label>No</label>
+          <!-- <br />
+          <label>Department</label>
+          <select name="dept">
+            <option>CSIS</option>
+            <option>PHYS</option>
+            <option>ART</option>
+            <option>MATH</option>
+          </select> -->
+          <br />
+          <br />
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+      <br />
+      <a href="index.html">Back to the homepage</a>
+    </div>
   </body>
 </html>

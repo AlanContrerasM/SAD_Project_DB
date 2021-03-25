@@ -7,6 +7,8 @@
 </head>
 
 <body>
+	<div id="container">
+		
 	<h1>Creating Table Student</h1>
 	<?php
 
@@ -57,6 +59,7 @@ the code in catch-block is executed. */
 	echo "<a href='../index.html'>Back to the homepage</a>";
 
 	?>
+	</div>
 
 </body>
 

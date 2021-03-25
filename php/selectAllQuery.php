@@ -7,7 +7,8 @@
 </head>
 
 <body>
-
+    <div id="container">
+		
     <?php
     $servername = "localhost";
     $dbname = "SAD";
@@ -49,6 +50,7 @@
     echo "<a href='../index.html'>Back to the homepage</a>";
 
     ?>
+    </div>
 </body>
 
 </html>

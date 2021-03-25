@@ -8,36 +8,41 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <form method="post" action="php/selectAllQuery.php">
-      <fieldset>
-        <legend>Display All Students</legend>
-        <br />
-        <br />
-        <input type="submit" value="Submit" />
-      </fieldset>
-    </form>
-    <br />
-    <br />
-    <form method="post" action="php/selectLikeQuery.php">
-      <fieldset>
-        <legend>Display Students whose name starts with</legend>
-        <label>Student Name Starts with</label>
-        <input type="text" name="sname" /> <br />
-        <br />
-        <input type="submit" value="Submit" />
-      </fieldset>
-    </form>
-
-    <br />
-    <br />
-    <form method="post" action="php/selectWhereQuery.php">
-      <fieldset>
-        <legend>Display Students Who are Alumnus?</legend>
-        <input name="alumnus" type="radio" value="1" /> <label>Yes</label>
-        <br />
-        <input name="alumnus" type="radio" value="0" /> <label>No</label>
-        <input type="submit" value="Submit" />
-      </fieldset>
-    </form>
+    <div id="container">
+      
+      <form method="post" action="php/selectAllQuery.php">
+        <fieldset>
+          <legend>Display All Students</legend>
+          <br />
+          <br />
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+      <br />
+      <br />
+      <form method="post" action="php/selectLikeQuery.php">
+        <fieldset>
+          <legend>Display Students whose name starts with</legend>
+          <br/>
+          <label>Student Name Starts with</label>
+          <input type="text" name="sname" /> <br />
+          <br />
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+  
+      <br />
+      <br />
+      <form method="post" action="php/selectWhereQuery.php">
+        <fieldset>
+          <legend>Display Students Who are Alumnus?</legend>
+          <br/>
+          <input name="alumnus" type="radio" value="1" /> <label>Yes</label>
+          <br />
+          <input name="alumnus" type="radio" value="0" /> <label>No</label>
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>

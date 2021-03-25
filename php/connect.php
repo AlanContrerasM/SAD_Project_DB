@@ -7,7 +7,8 @@
 </head>
 
 <body>
-
+	<div id="container">
+      
 	<?php
 	$servername = "localhost";   // means the database server is running on your own cmputer and not on a remote computer on a network or on the Internet.
 	$username = "root";          // this is the default administrator account to access the DBMS
@@ -27,8 +28,9 @@ the code in catch-block is executed. */
 
 	unset($conn);  // Always close the connection, when not needed any more.
 
-	echo "<a href='../index.html'>Back to the homepage</a>";
+	echo "<a class='linkPhp' href='../index.html'>Back to the homepage</a>";
 	?>
+	</div>
 
 </body>
 
