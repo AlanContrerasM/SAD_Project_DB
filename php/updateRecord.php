@@ -10,7 +10,7 @@
 
     <?php
     $servername = "localhost";
-    $dbname = "SaeedDB";
+    $dbname = "SAD";
     $username = "root";
     $password = "";
 
@@ -23,10 +23,11 @@
     }
 
     try {
-        $sql = "UPDATE " . $dbname . ".Student SET Name = :sname WHERE StdID = :stdId";
+        $sql = "UPDATE " . $dbname . ".Student SET SFirstName = :fname, SLastName = :lname WHERE StudentID = :stdId";
         $stmnt = $conn->prepare($sql);         // read about prepared statement here: https://www.w3schools.com/php/php_mysql_prepared_statements.asp
         $stmnt->bindParam(':stdId', $_POST['stdId']);
-        $stmnt->bindParam(':sname', $_POST['sname']);
+        $stmnt->bindParam(':fname', $_POST['fname']);
+        $stmnt->bindParam(':lname', $_POST['lname']);
 
         $stmnt->execute();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

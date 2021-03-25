@@ -10,7 +10,7 @@
 
     <?php
     $servername = "localhost";
-    $dbname = "SaeedDB";
+    $dbname = "SAD";
     $username = "root";
     $password = "";
 
@@ -23,7 +23,7 @@
     }
 
     try {
-        $sql = "SELECT  StdID,Name,BirthDate,Gender,Department FROM Student";
+        $sql = "SELECT  StudentID,SFirstName,SLastName,SDoB,Alumnus FROM Student";
         $stmnt = $conn->prepare($sql);    // read about prepared statement here: https://www.w3schools.com/php/php_mysql_prepared_statements.asp
 
         $stmnt->execute();
@@ -32,9 +32,9 @@
         $row = $stmnt->fetch();  // fetches the first row of the table
         if ($row) {      // if there is any result from the query
             echo '<table>';
-            echo '<tr> <th>StudentID</th> <th>Name</th> <th>Birth Date</th> <th>Gender</th> <th>Department</th> </tr>';
+            echo '<tr> <th>StudentID</th> <th>First Name</th> <th>Last Name</th> <th>Birth Date</th> <th>Alumnus</th></tr>';
             do {
-                echo '<tr><td>' . $row['StdID'] . '</td><td>' . $row['Name'] . '</td><td>' . $row['BirthDate'] . '</td><td>' . $row['Gender'] . '</td><td>' . $row['Department'] . '</td></tr>';
+                echo '<tr><td>' . $row['StudentID'] . '</td><td>' . $row['SFirstName'] . '</td><td>' . $row['SLastName'] . '</td><td>' . $row['SDoB'] . '</td><td>' . $row['Alumnus'] . '</td></tr>';
             } while ($row = $stmnt->fetch());     // fetches another row from the query result, until we reach to the end of the result
             echo '</table>';
         } else {

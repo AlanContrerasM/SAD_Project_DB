@@ -21,16 +21,16 @@ the code in catch-block is executed. */
 	try {
 		$conn = new PDO("mysql:host=$servername", $username, $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		echo "<p style='color:green'>Connection Was Successful</p>";
+		echo "<p style='color:green'>Connection Was Successful, now let's do the database...</p>";
 	} catch (PDOException $err) {
 		echo "<p style='color:red'>Connection Failed: " . $err->getMessage() . "</p>";
 	}
 
 	try {
-		$sql = "CREATE DATABASE SaeedDB;";   // SQL query
+		$sql = "CREATE DATABASE SAD;";   // SQL query
 
 		$conn->exec($sql);
-		echo "<p style='color:green'>Database Created Successfully</p>";
+		echo "<p style='color:green'>Database 'SAD' Created Successfully</p>";
 	} catch (PDOException $err) {
 		echo $sql . "<p style='color:red'>" . $err->getMessage() . "</p>";
 	}

@@ -7,10 +7,10 @@
 </head>
 
 <body>
-
+    <h1>Deleting from SAD database</h1>
     <?php
     $servername = "localhost";
-    $dbname = "SaeedDB";
+    $dbname = "SAD";
     $username = "root";
     $password = "";
 
@@ -27,7 +27,7 @@ the code in catch-block is executed. */
     }
 
     try {
-        $sql = "DELETE FROM " . $dbname . ".Student WHERE StdID = :stdId";
+        $sql = "DELETE FROM " . $dbname . ".Student WHERE StudentID = :stdId";
         $stmnt = $conn->prepare($sql);     // read about prepared statement here: https://www.w3schools.com/php/php_mysql_prepared_statements.asp
         $stmnt->bindParam(':stdId', $_POST['stdId']);   // :stdId is the variable that we used in $sql, there must be a colon (:) in front of it.
         //  stdId in $_POST['stdId'] is the name of the element in HTML Form. Make sure it matches exactly the name of the form element in HTML 

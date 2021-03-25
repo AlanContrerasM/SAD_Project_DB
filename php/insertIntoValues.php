@@ -5,10 +5,10 @@
 	<link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-
+<h1>Inserting the value into the SAD database</h1>
 <?php
 $servername ="localhost";
-$dbname = "SaeedDB";
+$dbname = "SAD";
 $username = "root";
 $password = "";
 
@@ -27,13 +27,13 @@ catch (PDOException $err) {
 
 
 try {
-	$sql="INSERT INTO Student (StdID, Name, BirthDate, Gender, Department) VALUES (:stdId, :sname, :bdate, :gender, :dept);";   // all the names variable names must start with colon (:)
+	$sql="INSERT INTO Student(StudentID, SFirstName, SLastName, SDoB, Alumnus) VALUES (:stdId, :fname, :lname, :bdate, :alumnus);";   // all the names variable names must start with colon (:)
 	$stmnt = $conn->prepare($sql);    // read about prepared statement here: https://www.w3schools.com/php/php_mysql_prepared_statements.asp
 	$stmnt->bindParam(':stdId', $_POST['stdId']);   // stdId in $_POST['stdId'] in the exact name of the input element in HTML. if any typo, your code does not work   
-	$stmnt->bindParam(':sname', $_POST['sname']);   // note the single quotes, If you foregt to put single quotes, your code does not work.
+	$stmnt->bindParam(':fname', $_POST['fname']);   // note the single quotes, If you foregt to put single quotes, your code does not work.
+	$stmnt->bindParam(':lname', $_POST['lname']);
 	$stmnt->bindParam(':bdate', $_POST['bdate']);
-	$stmnt->bindParam(':gender', $_POST['gender']);
-	$stmnt->bindParam(':dept', $_POST['dept']);
+	$stmnt->bindParam(':alumnus', $_POST['alumnus']);
 
 	$stmnt->execute();
 

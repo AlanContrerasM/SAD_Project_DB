@@ -11,7 +11,7 @@
 	<?php
 	$servername = "localhost";   // means the database server is running on your own cmputer and not on a remote computer on a network or on the Internet.
 	$username = "root";          // this is the default administrator account to access the DBMS
-	$password = "";			   // the password is empty by default, when you install WAMP
+	$password = "";			   // the password is empty by default, when you install WAMP, xampp??
 
 	/* Try MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password).
@@ -20,7 +20,7 @@ the code in catch-block is executed. */
 	try {
 		$conn = new PDO("mysql:host=$servername", $username, $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		echo "<p style='color:green'>Connection Was Successful</p>";    // generates HTML code to display success message
+		echo "<p style='color:green'>Connection Was Successful. Everything looks good so far!</p>";    // generates HTML code to display success message
 	} catch (PDOException $err) {
 		echo "<p style='color:red'>Connection Failed: " . $err->getMessage() . "</p>\r\n";   // displays message for the error that has happened
 	}
